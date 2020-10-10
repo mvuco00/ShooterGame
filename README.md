@@ -1,1 +1,1 @@
-# seminarRG
+# Igrica u Pytjonu
