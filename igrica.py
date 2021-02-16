@@ -192,9 +192,9 @@ class Game:
                         quit()
 
             self.screen.fill(BLACK)
-            self.message_to_screen("Welcome", (0,255,0), -130, size="medium")
-            self.message_to_screen("to SPACE FIGHT", (0,255,0), -50, size="medium")
-            self.message_to_screen("Press C to continue", LIGHTBLUE, 10, size="small")
+            self.message_to_screen("Welcome to", (0,255,0), -130, size="medium")
+            self.message_to_screen("SHOOTER GAME", (0,255,0), -50, size="medium")
+            self.message_to_screen("Press C to continue,", LIGHTBLUE, 10, size="small")
             self.message_to_screen(" Q to quit", LIGHTBLUE, 50, size="small")
             pg.display.update()
 
@@ -411,7 +411,9 @@ class Powerful_enemy(pg.sprite.Sprite):
 def main():
     pg.init()
     screen = pg.display.set_mode((DISPLAY_WIDTH,DISPLAY_HEIGHT))
-    pg.display.set_caption('Space Fight')
+    pg.display.set_caption('Shooter game')
+    icon = pg.image.load('img/player.png')
+    pg.display.set_icon(icon)
     clock = pg.time.Clock()
     game = Game(screen)
 

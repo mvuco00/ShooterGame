@@ -1,6 +1,14 @@
 # ShooterGame
 Igrač treba pucati na neprijatelje koji ga napadaju. Uništavanjem neprijatelja skuplja bodove. Neprijatelji su različiti pa vrijede različit broj bodova. Neke neprijatelje treba nekoliko puta upucati da ih se uništi. Ne smije se propustiti nijedan neprijatelj jer će igra onda završiti. Igrač povremeno dobiva nagradu kojom povećava broj bodova.
 
+<p float="left">
+<img src="images/shooterIntro.png" width="200">
+<img src="images/shooterGame.png" width="200">
+<img src="images/shooterGame2.png" width="200">
+<img src="images/shooterPaused.png" width="200">
+<img src="images/shooterGameOver.png" width="200">
+</p>
+
 ## Alati
 - Python, Pygame
 
