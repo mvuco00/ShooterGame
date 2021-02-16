@@ -42,7 +42,7 @@ class Game:
         self.player = Player()
         self.enemy = None
         self.big_enemy = None
-        pg.mixer.music.load("bgmusic.mp3")
+        pg.mixer.music.load("music/bgmusic.mp3")
         pg.mixer.music.play()
 
         self.player_sprite.add(self.player)
@@ -80,7 +80,7 @@ class Game:
 
 
     def display_frame(self):
-        bg_image = pg.image.load('city_new2.png')
+        bg_image = pg.image.load('img/city_new2.png')
         self.all_sprites.update()
 
         if self.game_over:
@@ -104,9 +104,9 @@ class Game:
 
 
     def check_collision(self):
-        coin_sound = pg.mixer.Sound('coins.wav')
-        shot_sound = pg.mixer.Sound('boom.wav')
-        big_enemy_dies = pg.mixer.Sound('enemydie.wav')
+        coin_sound = pg.mixer.Sound('music/coins.wav')
+        shot_sound = pg.mixer.Sound('music/boom.wav')
+        big_enemy_dies = pg.mixer.Sound('music/enemydie.wav')
 
 
         # gledamo je li neprijatelj udario u igrača
@@ -311,7 +311,7 @@ class Bullets(pg.sprite.Sprite):
 class Coins(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
-        self.image = pg.image.load('coin2.png')
+        self.image = pg.image.load('img/coin2.png')
         self.rect = self.image.get_rect()
         self.speed = 10
         self.rect.x = random.randrange(0, DISPLAY_WIDTH - self.rect.width)
@@ -332,7 +332,7 @@ class Player(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
         # http://untamed.wild-refuge.net/rmxpresources.php?characters
-        self.image = pg.image.load('player.png')
+        self.image = pg.image.load('img/player.png')
         self.rect = self.image.get_rect(center = self.player_position)
 
         self.move_x = 15
@@ -365,7 +365,7 @@ class Enemy(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
         # https://forums.rpgmakerweb.com/index.php?threads/marvel-characters-sets-sv-battlers-avengers-spider-man-x-men-more.101244/
-        self.image_names = ['big0.png', 'big1.png', 'big2.png', 'big3.png', 'big4.png']
+        self.image_names = ['img/big0.png', 'img/big1.png', 'img/big2.png', 'img/big3.png', 'img/big4.png']
         self.random_img = random.choice(self.image_names)
         self.image = pg.image.load(self.random_img)
         self.rect = self.image.get_rect()
@@ -380,9 +380,9 @@ class Enemy(pg.sprite.Sprite):
         self.rect.y += self.speed
 
     def different_scores(self, rand_img):
-        if rand_img == 'big0.png':
+        if rand_img == 'img/big0.png':
             return 5
-        elif rand_img == 'big1.png' or rand_img == 'big2.png':
+        elif rand_img == 'img/big1.png' or rand_img == 'img/big2.png':
             return 4
         else:
             return 1
@@ -392,7 +392,7 @@ class Enemy(pg.sprite.Sprite):
 class Powerful_enemy(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
-        self.image = pg.image.load('bigenemy.png')
+        self.image = pg.image.load('img/bigenemy.png')
         self.rect = self.image.get_rect()
         self.rect.x = random.randrange(self.rect.width, DISPLAY_WIDTH - self.rect.width)
         self.rect.y = random.randrange(-300, -self.rect.height)
