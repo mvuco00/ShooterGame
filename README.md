@@ -1,10 +1,10 @@
 # ShooterGame
 > the classic arcade shooting game 
 <img alt="Python" src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white"/>
-</br>
+
 The user uses the arrow keys to move a "player" around. A player needs to shoot all of the enemies that are falling from the sky. Each enemy is worth a certain number of points.
 The game ends when the enemy manages to leave the screen without being shot by the player. The goal is to score as many points as possible before that happens.
-</br>
+
 
 <p float="left">
 <img src="images/shooterIntro.png" width="200">
